@@ -1,0 +1,2 @@
+sodapy==2.1.0
+google_cloud_pubsub==2.9.0

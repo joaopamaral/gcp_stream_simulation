@@ -1,0 +1,9 @@
+offline_data/*
+
+americanas _ teste técnico_Engenharia de Dados para Big Data & Analytics.pdf
+
+.terraform
+*.lock.hcl
+*.tfstate*
+
+stream_simulate_service_account_key.json
