@@ -23,7 +23,7 @@ A arquitetura desenvolvida para esse projeto foi visando utilizar todo o simulad
 
 ### Ingestão dos dados
 
-A ingestão dos dados é feitor por um simulador que foi desenvolvido em python e faz as requisições dos dados por meio de uma [API](https://dev.socrata.com/foundry/data.cityofnewyork.us/2upf-qytp). Toda a definição de quantos dados serão obtidos, qual o intervalo de requisição e por quanto os dados serão coletados foi todo parametrizado na aplicação. 
+A ingestão dos dados é feitor por um simulador que foi desenvolvido em python e faz as requisições dos dados por meio de uma [API](https://dev.socrata.com/foundry/data.cityofnewyork.us/2upf-qytp). Toda a definição de quantos dados serão obtidos, qual o intervalo de requisição e por quanto tempo os dados serão coletados foi todo parametrizado na aplicação. 
 
 Após obter os dados, eles são enviados para o Cloud PubSub por meio da api do google cloud.
 
@@ -46,7 +46,7 @@ optional arguments:
                         Time in seconds between each request (default 1 sec)
 ```
 
-Essa aplicação foi containerizada e sua imagem foi armazenada no Cloud Registry e utilizada pelo Cloud Run para manter a sua execução em cloud.
+Essa aplicação foi containerizada e sua imagem armazenada no Cloud Registry e utilizada pelo Cloud Run para manter a execução do container em cloud.
 
 Uma outra opção seria utilizar o Cloud Functions e agendar as requisições por meio do do Cloud Scheduler ou até mesmo utilizar um Apache Airflow (Cloud Composer) para orquestrar as chamadas a função.
 
@@ -139,7 +139,7 @@ Streaming:
 
 Uma opção para realizar uma análise da qualidade dos dados é verificar durante a etapa de processamento (DataFlow) e analisar os campos que estão sendo ingeridos (valores nulos, outliers, dado mal formatado, etc). Dessa forma, é possível gerar métricas em tempo real e evitar de ingerir dado de má qualidade.
 
-Uma outra opção é realizar análises periódicas dos dados no Data Warehouse (BigQuery), gerando um relatório diario/semanal/mensal verificando a qualidade dos dados por meio de queries pre definidas. Nesse caso essa verificação/relatório poderia ser orquestrado por meio de uma ferramenta como o Apache Airflow.
+Outra opção é realizar análises periódicas dos dados no Data Warehouse (BigQuery), gerando um relatório diario/semanal/mensal verificando a qualidade dos dados por meio de queries pre definidas. Nesse caso essa verificação/relatório poderia ser orquestrado por meio de uma ferramenta como o Apache Airflow.
 
 ## Ambiente de Testes
 
