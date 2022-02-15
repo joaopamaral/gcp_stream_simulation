@@ -1,6 +1,6 @@
 # Projeto de Simulador de Streaming rodando na Google Cloud Plataform
 
-Esse projeto teve o objetivo de construir um simulator de streaming rodand na GCP e utilizando os dados da base de viagens de táxi de New York de 2019.
+Esse projeto tem o objetivo de construir um simulador para o processamento de dados streaming na GCP, (utilizando os dados da base de viagens de táxi de New York de 2019).
 
 ## Pré-requisitos
 
