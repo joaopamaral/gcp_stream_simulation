@@ -161,4 +161,4 @@ Foi configurado um github actions para que o teste seja executado a cada commit 
 
 Para esse projeto, não foi definido um deployment automatico (pois o simulador é apenas para teste), mas se esse projeto fosse uma solução real, poderia ser definido no github actions o build e deploy da imagem no qual o container do simulador roda diretamente para cloud (forçando o container a atualizar a ultima versão). 
 
-Para tal, seria necessário configurar a autenticação de acesso ao projeto no github actions e utilizaro o comando `make build_submit_cloud_image`
+Para tal, seria necessário configurar a autenticação de acesso ao projeto no github actions e utilizaro o comando `make build_submit_cloud_image` para buildar e submeter a imagem no registry.
