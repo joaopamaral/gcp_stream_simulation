@@ -9,3 +9,6 @@ limited_test_docker:
 
 build_submit_cloud_image:
 	gcloud builds submit
+
+test_simulator:
+	PYTHONPATH=./src pytest
